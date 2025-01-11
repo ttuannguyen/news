@@ -6,13 +6,13 @@ export default function NewsPage() {
       <h1>News Page</h1>
       <ul>
         <li>
-          <Link href="news1">First News Item</Link>
+          <Link href="/news/news1">First News Item</Link>
         </li>
         <li>
-          <Link href="news2">Second News Item</Link>
+          <Link href="/news/news2">Second News Item</Link>
         </li>
         <li>
-          <Link href="news3">Third News Item</Link>
+          <Link href="/news/news3">Third News Item</Link>
         </li>
       </ul>
     </>
