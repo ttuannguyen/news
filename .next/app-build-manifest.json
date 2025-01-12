@@ -16,15 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/news/page.js"
     ],
-    "/news/[newsSlug]/page": [
+    "/news/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/news/[newsSlug]/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/news/[slug]/page.js"
     ]
   }
 }
