@@ -1,5 +1,9 @@
 export default function ArchivePage() {
-    return <h1>
-        Archive
-    </h1>
+    return <head id="archive-header">
+        <nav>
+            <ul>
+                
+            </ul>
+        </nav>
+    </head>
 }
