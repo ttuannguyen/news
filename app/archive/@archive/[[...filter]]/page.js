@@ -4,7 +4,11 @@ import Link from "next/link";
 
 export default function FilteredNewsPage({ params }) {
   const filter = params.filter;
-  const news = getNewsForYear(newsYear);
+
+  const selectedYear = filter?.[0];
+  //   const selectedYear = filter ? filter[0] : undefined;
+
+  const selectedMonth = filter?.[1];
 
   const links = getAvailableNewsYears();
 
