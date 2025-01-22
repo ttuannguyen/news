@@ -10,6 +10,16 @@ export default function FilteredNewsPage({ params }) {
 
   const selectedMonth = filter?.[1];
 
+  let news;
+
+  if (selectedYear && !selectedMonth) {
+    news = getNewsForYear(selectedYear);
+  }
+
+  let newsContent = <p>No news found for selected period.</p>
+
+
+
   const links = getAvailableNewsYears();
 
   return (
