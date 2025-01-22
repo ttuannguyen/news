@@ -16,25 +16,28 @@ export default function FilteredNewsPage({ params }) {
     news = getNewsForYear(selectedYear);
   }
 
-  let newsContent = <p>No news found for selected period.</p>
+  let newsContent = <p>No news found for selected period.</p>;
 
-
+  if (selectedYear && !selectedMonth > 0) {
+    newsContent = <NewsList news={news} />;
+  }
 
   const links = getAvailableNewsYears();
 
   return (
-    <header id="archive-header">
-      <nav>
-        <ul>
-          {links.map((link) => (
-            <li key={link}>
-              <Link href={`/archive/${link}`}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <>
+      <header id="archive-header">
+        <nav>
+          <ul>
+            {links.map((link) => (
+              <li key={link}>
+                <Link href={`/archive/${link}`}>{link}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+      {newsContent}
+    </>
   );
-
-  //<NewsList news={news} />
 }
