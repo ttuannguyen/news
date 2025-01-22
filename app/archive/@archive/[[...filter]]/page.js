@@ -24,6 +24,7 @@ export default function FilteredNewsPage({ params }) {
 
   if (selectedYear && selectedMonth) {
     news = getNewsForYearAndMonth(selectedYear, selectedMonth);
+    links = [];
   }
 
   let newsContent = <p>No news found for selected period.</p>;
